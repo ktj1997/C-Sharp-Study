@@ -6,7 +6,7 @@
     <RootNamespace>c_</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>Variable.Variable</StartupObject>
+    <StartupObject>For.For</StartupObject>
   </PropertyGroup>
 
 </Project>
