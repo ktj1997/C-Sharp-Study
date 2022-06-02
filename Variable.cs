@@ -28,6 +28,7 @@ namespace Variable
             /**
 			  * string은 ReferenceType이다.
 			  * @키워드를 문자열 앞에 붙이면, Escape는 물론, 입력한 형식그대로 저장한다.
+			  * string은 문자의 배열이다 --> Index로 접근 가능하다.
 			  */
             string normalString = "hello";
             string multipleLines = @"
