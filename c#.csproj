@@ -6,7 +6,7 @@
     <RootNamespace>c_</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>Function.Function</StartupObject>
+    <StartupObject>Struct.Struct</StartupObject>
   </PropertyGroup>
 
 </Project>
