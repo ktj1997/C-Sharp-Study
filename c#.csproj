@@ -6,7 +6,7 @@
     <RootNamespace>c_</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>Enumeration.Enumeration</StartupObject>
+    <StartupObject>Class.Class</StartupObject>
   </PropertyGroup>
 
 </Project>
