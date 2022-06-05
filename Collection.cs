@@ -1,3 +1,4 @@
+using System.Collections;
 namespace Collection
 {
     class Collection
@@ -11,17 +12,44 @@ namespace Collection
             var array1 = new string[] { "Array", "List", "Dictionary" };
             var array2 = new string[len];
 
+            var numbers = new int[] { 3, 1, 4, 2, 5, 7, 6 };
+
             array2[0] = "hello";
             array2[1] = "my";
             array2[2] = "name";
             array2[3] = "is";
             array2[4] = "xxx";
 
+            Array.Sort(numbers);
+            foreach (int num in numbers)
+            {
+                Console.WriteLine(num);
+            }
+            Array.Reverse(numbers);
+            foreach (int num in numbers)
+            {
+                Console.WriteLine(num);
+            }
+            string[] stringNumbers = Array.ConvertAll(numbers, Convert.ToString);
+            foreach (object num in stringNumbers)
+            {
+                if (num is string)
+                {
+                    Console.WriteLine($"{num} is string : True");
+                }
+                else
+                {
+                    Console.WriteLine($"{num} is string : false");
+                }
+            }
+
+
             Console.WriteLine($"Length = {array2.Length}");
             foreach (string token in array2)
             {
                 Console.WriteLine(token);
             }
+
 
             /**
 			  * 2차원 Array
@@ -106,6 +134,63 @@ namespace Collection
             dictionary2.Add(1, "hello");
             dictionary2.Add(2, "my");
             dictionary2.Add(3, "name");
+
+
+            /**
+              * Stack
+              */
+            Stack<string> stack = new Stack<string>();
+            stack.Push("1");
+            stack.Push("2");
+
+            while (stack.Count > 0)
+            {
+                int token = Convert.ToInt32(stack.Pop());
+                Console.WriteLine(token);
+            }
+            stack.Clear();
+
+
+
+            /**
+              * Queue
+              */
+            Queue<string> queue = new Queue<string>();
+            queue.Enqueue("1");
+            queue.Enqueue("2");
+            queue.Enqueue("3");
+
+            while (queue.Count > 0)
+            {
+                int token = Convert.ToInt32(queue.Dequeue());
+                Console.WriteLine(token);
+            }
+            /**
+              * ArrayList
+              * List<T> 가 생기기 이전에 만들어졌다.
+              * Generic을 지원하지않고, object형태를 받을 수 있다.
+              * List<T>를 사용하도록 하자
+              */
+
+            ArrayList aList = new ArrayList();
+            aList.Add("eee");
+            aList.Add(5);
+
+
+            /**
+              * HashTable
+              * 정수 및 문자열 인덱스를 Key로 접근 가능하다.
+              * Non-Generic Class 이다.
+              * Generic한 HashTable구현체로는 Dictionary가 있다.
+              */
+            Hashtable hashTable = new Hashtable();
+            hashTable[0] = "hello";
+            hashTable["key"] = "value";
+
+            foreach (object key in hashTable.Keys)
+            {
+                Console.WriteLine(key);
+            }
         }
     }
 }
