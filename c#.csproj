@@ -6,7 +6,7 @@
     <RootNamespace>c_</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>Indexer.Indexer</StartupObject>
+    <StartupObject>Delegate.Delegate</StartupObject>
   </PropertyGroup>
 
 </Project>
