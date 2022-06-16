@@ -1,4 +1,5 @@
 
+using System.Security.Cryptography.X509Certificates;
 namespace Class
 {
     /**
@@ -31,8 +32,8 @@ namespace Class
             Child c1 = new Child(age: 5, name: "lee");
 
             /**
-											* 상속관계에서의 타입 검증
-											*/
+			  * 상속관계에서의 타입 검증
+			  */
 
             if (c1 is Person)
             {
@@ -44,6 +45,17 @@ namespace Class
             }
 
             Console.WriteLine($"c1 = age: {c1.age} & name: {c1.name}");
+
+
+            /**
+			  * Override 여부 검증
+			  */
+            p1.OverrideableMethod1();
+            c1.OverrideableMethod1();
+
+            p1.OverrideMethod2();
+            c1.OverrideMethod2();
+
         }
     }
     /**
@@ -86,6 +98,15 @@ namespace Class
         {
             Console.WriteLine("Parent Is Generated");
         }
+
+        public virtual void OverrideableMethod1()
+        {
+            Console.WriteLine("Parent Method");
+        }
+        public void OverrideMethod2()
+        {
+            Console.WriteLine("Parent Method Without Virtual Keyword");
+        }
     }
 
     public class Child : Parent
@@ -93,6 +114,19 @@ namespace Class
         public Child(string name, int age) : base(name, age)
         {
             Console.WriteLine("Child Is Generated");
+        }
+
+        /**
+		  * sealed 키워드는 상속을 방지 시킬 수 있다.
+		  */
+        public override sealed void OverrideableMethod1()
+        {
+            Console.WriteLine("Child Method");
+        }
+
+        new public void OverrideMethod2()
+        {
+            Console.WriteLine("Child Override Method With New Keyword");
         }
     }
 }
