@@ -6,7 +6,11 @@
     <RootNamespace>c_</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>Interface.Interface</StartupObject>
+    <StartupObject>AttributeExample.AttributeExample</StartupObject>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Reflection.cs" />
+  </ItemGroup>
 
 </Project>
